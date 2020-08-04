@@ -36,40 +36,40 @@ class StateToPdfMake {
       this._updateAndResetOlList();
     }
 
-    switch (block.getType()) {
+    sswitch (block.getType()) {
       case BLOCK_TYPE.HEADER_ONE:
         this.output.content.push({
-          text: this._renderBlockContent(block), fontSize : 24, ...defaultHeaderStyle
+          text: this._renderBlockContent(block).map(block => ({...block, fontSize : 24, ...defaultHeaderStyle}))
         });
       break;
 
       case BLOCK_TYPE.HEADER_TWO:
         this.output.content.push({
-          text: this._renderBlockContent(block), fontSize : 22, ...defaultHeaderStyle
+          text: this._renderBlockContent(block).map(block => ({...block, fontSize : 22, ...defaultHeaderStyle}))
         });
       break;
 
       case BLOCK_TYPE.HEADER_THREE:
         this.output.content.push({
-          text: this._renderBlockContent(block), fontSize : 20, ...defaultHeaderStyle
+          text: this._renderBlockContent(block).map(block => ({...block, fontSize : 20, ...defaultHeaderStyle}))
         });
       break;
 
       case BLOCK_TYPE.HEADER_FOUR:
         this.output.content.push({
-          text: this._renderBlockContent(block), fontSize : 18, ...defaultHeaderStyle
+          text: this._renderBlockContent(block).map(block => ({...block, fontSize : 18, ...defaultHeaderStyle}))
         });
       break;
 
       case BLOCK_TYPE.HEADER_FIVE:
         this.output.content.push({
-          text: this._renderBlockContent(block), fontSize : 16, ...defaultHeaderStyle
+          text: this._renderBlockContent(block).map(block => ({...block, fontSize : 16, ...defaultHeaderStyle}))
         });
       break;
 
       case BLOCK_TYPE.HEADER_SIX:
         this.output.content.push({
-          text: this._renderBlockContent(block), fontSize : 14, ...defaultHeaderStyle
+          text: this._renderBlockContent(block).map(block => ({...block, fontSize : 14, ...defaultHeaderStyle}))
         });
       break;
 
