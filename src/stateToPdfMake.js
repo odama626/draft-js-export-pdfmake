@@ -36,7 +36,7 @@ class StateToPdfMake {
       this._updateAndResetOlList();
     }
 
-    sswitch (block.getType()) {
+    switch (block.getType()) {
       case BLOCK_TYPE.HEADER_ONE:
         this.output.content.push({
           text: this._renderBlockContent(block).map(block => ({...block, fontSize : 24, ...defaultHeaderStyle}))
